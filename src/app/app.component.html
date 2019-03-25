@@ -1,20 +1,71 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav mode="side" opened>Sidenav content</mat-sidenav>
+  <mat-sidenav-content>
+    <form class="example-form-container grid grid-col-3" #form="ngForm">
+      <mat-form-field>
+        <input type="text" matInput placeholder="Imię" [(ngModel)]="hero.name" required="required" [minLength]="3"
+               name="name" #name="ngModel">
+        <mat-error *ngIf="name.errors?.required">Pole jest wymagane</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="email" matInput placeholder="Nazwisko">
+      </mat-form-field>
+      <mat-form-field>
+        <input type="password" matInput placeholder="Miasto" [formControl]="mailControl">
+        <mat-error *ngIf="mailControl.hasError('required')">Tak!</mat-error>
+        <mat-error *ngIf="mailControl.hasError('minLength')">Nie!</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="number" matInput placeholder="Ulica">
+      </mat-form-field>
+      <mat-checkbox>Zapisz się do newslettera</mat-checkbox>
+      <mat-checkbox labelPosition="before">Zgadzam się na warunki</mat-checkbox>
+      <mat-checkbox>Zapisz mnie na spam bo chcę odbierać</mat-checkbox>
+      <mat-checkbox>Check me!</mat-checkbox>
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="color" matInput placeholder="Kolor budynku">
+      </mat-form-field>
+      <mat-form-field>
+        <input type="datetime-local" matInput placeholder="Data płatności">
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput placeholder="Textarea"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput placeholder="Textarea"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput placeholder="Textarea"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput placeholder="Textarea"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput placeholder="Textarea"></textarea>
+      </mat-form-field>
 
+      <mat-form-field>
+        <mat-select placeholder="Select">
+          <mat-option value="option1">Option1</mat-option>
+          <mat-option value="option2">Option2</mat-option>
+          <mat-option value="option3">Option3</mat-option>
+          <mat-option value="option4">Option4</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="Select">
+          <mat-option value="option1">Option1</mat-option>
+          <mat-option value="option2">Option2</mat-option>
+          <mat-option value="option3">Option3</mat-option>
+          <mat-option value="option4">Option4</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button type="submit" mat-raised-button (click)="test()" [disabled]="!form.form.valid">Zapisz</button>
+    </form>
+  </mat-sidenav-content>
+</mat-sidenav-container>
