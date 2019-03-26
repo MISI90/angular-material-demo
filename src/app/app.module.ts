@@ -17,10 +17,12 @@ import {
   MatSnackBarModule
 } from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {BaseInputComponent} from './base-input/base-input.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BaseInputComponent
   ],
   imports: [
     BrowserModule,

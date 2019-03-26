@@ -1,12 +1,15 @@
 <mat-sidenav-container class="example-container">
   <mat-sidenav mode="side" opened>Sidenav content</mat-sidenav>
   <mat-sidenav-content>
-    <form class="example-form-container grid grid-col-3" #form="ngForm">
+    <form class="example-form-container grid grid-auto-350" #form="ngForm">
       <mat-form-field>
         <input type="text" matInput placeholder="Imię" [(ngModel)]="hero.name" required="required" [minLength]="3"
                name="name" #name="ngModel">
         <mat-error *ngIf="name.errors?.required">Pole jest wymagane</mat-error>
       </mat-form-field>
+      <app-base-input></app-base-input>
+      <app-base-input></app-base-input>
+      <app-base-input></app-base-input>
       <mat-form-field>
         <input type="email" matInput placeholder="Nazwisko">
       </mat-form-field>
