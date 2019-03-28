@@ -7,3 +7,47 @@
   background: #eee;
 }
 
+a {
+  display: block;
+  width: 200px;
+  border-radius: 0;
+  height: 60px;
+  line-height: 60px;
+  border: 1px solid red;
+}
+
+a mat-icon {
+  position: absolute;
+  right: 0;
+}
+
+.arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.arrow-up {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid black;
+}
+
+.arrow-down {
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #f00;
+}
+
+.arrow-right {
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  border-left: 60px solid green;
+}
+
+.arrow-left {
+  right: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid blue;
+}

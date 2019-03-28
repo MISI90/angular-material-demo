@@ -9,6 +9,7 @@ import {
   MatCommonModule,
   MatDatepickerModule,
   MatFormFieldModule,
+  MatIconModule,
   MatInputModule,
   MatNativeDateModule,
   MatOptionModule,
@@ -39,7 +40,8 @@ import {BaseInputComponent} from './base-input/base-input.component';
     MatSelectModule,
     MatCommonModule,
     MatInputModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatIconModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'pl-PL'}
