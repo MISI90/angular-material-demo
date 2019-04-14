@@ -19,11 +19,17 @@ import {
 } from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BaseInputComponent} from './base-input/base-input.component';
+import {TreeViewComponent} from './tree-view/tree-view.component';
+import {TreeNodeComponent} from './tree-node/tree-node.component';
+import {TreeCoreComponent} from './tree-core/tree-core.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BaseInputComponent
+    BaseInputComponent,
+    TreeViewComponent,
+    TreeNodeComponent,
+    TreeCoreComponent
   ],
   imports: [
     BrowserModule,
