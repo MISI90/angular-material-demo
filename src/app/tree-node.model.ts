@@ -1,6 +1,5 @@
 export interface TreeNodeModel {
-  hierarchy?: string;
-  label?: string;
+  name?: string;
   expanded?: boolean;
   nodes?: TreeNodeModel[];
 }

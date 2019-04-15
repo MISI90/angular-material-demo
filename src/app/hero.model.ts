@@ -6,9 +6,5 @@ export class HeroModel implements TreeNodeModel {
   age: number;
   bio: string;
   heros: HeroModel[] = [];
-  hierarchy = String(this.id);
-  label = this.hierarchy + ' - ' + this.name;
-  nodes = this.heros;
-
-
+  expanded?: boolean = false;
 }

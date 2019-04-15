@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {TreeNodeModel} from '../tree-node.model';
+import {HeroModel} from '../hero.model';
 
 @Component({
   selector: 'app-tree-node',
@@ -8,12 +8,17 @@ import {TreeNodeModel} from '../tree-node.model';
 })
 export class TreeNodeComponent implements OnInit {
 
-  @Input() nodes: TreeNodeModel[];
+  @Input() model: HeroModel[];
 
   constructor() {
   }
 
   ngOnInit() {
+    console.log('init');
+  }
+
+  toggle(node: HeroModel) {
+    node.expanded = !node.expanded;
   }
 
 }

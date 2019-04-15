@@ -18,7 +18,31 @@ export class TreeViewComponent implements OnInit {
       age: 13,
       name: 'Stefan',
       bio: 'Super Stefan elo',
-      heros: []
+      heros: [{
+        id: 1.1,
+        age: 13,
+        name: 'Stefan',
+        bio: 'Super Stefan elo',
+        heros: [{
+          id: 1.1,
+          age: 13,
+          name: 'Stefan',
+          bio: 'Super Stefan elo',
+          heros: [{
+            id: 1.1,
+            age: 13,
+            name: 'Stefan',
+            bio: 'Super Stefan elo',
+            heros: [{
+              id: 1.1,
+              age: 13,
+              name: 'Stefan',
+              bio: 'Super Stefan elo',
+              heros: []
+            }]
+          }]
+        }]
+      }]
     }, {
       id: 1.2,
       age: 13,

@@ -1,4 +1,13 @@
-<p *ngFor="let node of nodes">
-  {{node.}}
-  <app-tree-node [nodes]="node.nodes"></app-tree-node>
-</p>
+<div *ngFor="let node of model">
+  <a mat-icon-button *ngIf="!node.expanded && node.heros.length > 0" (click)="toggle(node)">
+    <mat-icon>chevron_right</mat-icon>
+  </a>
+  <a mat-icon-button *ngIf="node.expanded && node.heros.length > 0" (click)="toggle(node)">
+    <mat-icon>expand_more</mat-icon>
+  </a>
+  <a mat-icon-button *ngIf="node.heros.length == 0" disabled="disabled">
+    <mat-icon></mat-icon>
+  </a>
+  <a mat-button>{{node.id}} - {{node.name}}</a>
+  <app-tree-node *ngIf="node.expanded" [model]="node.heros"></app-tree-node>
+</div>
