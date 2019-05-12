@@ -105,17 +105,25 @@ export class TreeViewComponent implements OnInit {
   handleSearch(value: string) {
     console.log(value);
     this.closeAll();
-    this.searchNode(this.heroes, value);
+    this.searchAll(this.heroes, value);
+  }
+
+  private searchAll(heroes: HeroModel[], value: string) {
+    for (const hero of heroes) {
+      hero.expanded = this.searchNode(hero.heros, value);
+    }
   }
 
   private searchNode(nodes: HeroModel[], searchValue: string): boolean {
     for (const node of nodes) {
+      console.log('checking: ' + node.name);
       node.expanded = this.searchNode(node.heros, searchValue);
-      if (node.name.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()) || node.expanded) {
-        console.log('found node: ' + node);
+      if (node.name.toLowerCase().includes(searchValue.toLowerCase()) || node.expanded) {
+        console.log('checking: ' + node.name + ':true');
         return true;
       }
     }
+    // console.log('checking: ' + node.name + ':true');
     return false;
   }
 
