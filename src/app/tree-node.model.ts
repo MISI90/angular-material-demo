@@ -1,5 +1,7 @@
-export interface TreeNodeModel {
-  name?: string;
+export abstract class TreeNodeModel {
   expanded?: boolean;
-  nodes?: TreeNodeModel[];
+
+  abstract getLabel(): string;
+
+  abstract getChilds(): TreeNodeModel[];
 }

@@ -8,6 +8,6 @@
   <a mat-icon-button *ngIf="node.heros.length == 0" disabled="disabled">
     <mat-icon></mat-icon>
   </a>
-  <a mat-button>{{node.id}} - {{node.name}}</a>
+  <a mat-button>{{node.name}}</a>
   <app-tree-node *ngIf="node.expanded" [model]="node.heros"></app-tree-node>
 </div>
